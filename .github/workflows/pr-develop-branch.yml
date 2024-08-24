@@ -34,6 +34,11 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                 node-version: '20.0.0'
+            - name: Install dependencies
+              run: npm install
+
+            - name: Run tests
+              run: npm test
 
             # The idea is that the VM can access your remote repository
             # because your repository is an sfdx project.
