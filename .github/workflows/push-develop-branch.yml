@@ -48,14 +48,14 @@ jobs:
                   mkdir changed-sources
                   sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/
 
-            Authenticate to org
+            # Authenticate to org
             - name: 'Authenticate to Integration Org'
               run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt -s -a integration
 
             # Deploy delta changes to Integration org
             - name: 'Deploy delta changes to Integration org'
               run: sfdx force:source:deploy -p changed-sources --testlevel RunLocalTests --json
-              
+
             # - name: 'Deploy the entire branch to Integration org'
             #   run: sfdx force:source:deploy -p changed-sources --testlevel RunLocalTests --json
 
