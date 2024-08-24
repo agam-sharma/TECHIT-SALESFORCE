@@ -1,21 +1,4 @@
 # This is a comment line and will be ignored by GitHub
 
 # Define code owners for the entire repository
-*       @global-agam-sharma
-# Define code owners for a specific directory
-/docs/  @docs-team
-
-# Define code owners for a specific file
-README.md  @user1
-
-# Define code owners for a specific branch
-# Branches cannot be directly specified in CODEOWNERS
-# But you can enforce code ownership on branch-specific files or folders
-/main-folder/  @team-main-branch
-
-# Define code owners for a specific file type
-*.js    @frontend-team
-
-# Define code owners for multiple directories
-/apps/ @app-team
-/libs/ @lib-team
+*       @agam-sharma
